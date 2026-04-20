@@ -62,8 +62,26 @@ Your speed setting (Refresh Rate) and privacy level are automatically saved in a
 
 ---
 
-## 🚀 How to Run
+## 📦 How to Use
 
-1. Download the `Native-Hardware-Monitor.ps1` file.
-2. Right-click the file and choose **"Run with PowerShell"**.
-3. *(Optional but Recommended)* To read Motherboard temperatures (ACPI) and TPM security chip data, run the script as Administrator. Without Admin privileges, the script will still work perfectly, but these two metrics will display `N/A`.
+### For Common Users (Recommended)
+1. Go to the **[Releases]** tab on the right side of this page.
+2. Download the latest ZIP file (e.g., `NATIVE HARDWARE MONITOR_EXE.zip`).
+3. Extract the folder anywhere on your computer and run `NATIVE HARDWARE MONITOR.exe`.
+
+> ⚠️ **Important Notice (DPI Scaling):** If you use Windows scaling above 100% (e.g., 125%, 150%), **do not delete** the `NativeMonitor.exe.config` file. It is essential for informing Windows that the program is *DPI Aware*, ensuring the interface remains sharp and correctly sized without blurriness or cuts.
+
+### For Developers (Source Code)
+1. Download the `NATIVE HARDWARE MONITOR.ps1` file.
+2. The script can be executed directly via PowerShell or compiled into an executable using the **ps2exe** module.
+3. To compile with the same scaling protection and behavior as the official release, use the following command:
+   `ps2exe .\NATIVE HARDWARE MONITOR.ps1 -NoConsole -STA -SupportOS -DPIAware`
+
+## 🛠️ Technical Requirements
+
+* **Operating System:** Windows 10 or 11.
+* **Dependencies:** PowerShell 5.1 or higher.
+* **Hardware (Optional):** GPU monitoring requires NVIDIA drivers with `nvml.dll` support.
+
+---
+**Developed by:** Fabiopsyduck
